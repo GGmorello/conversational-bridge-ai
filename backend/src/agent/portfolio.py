@@ -3,7 +3,7 @@ from openai import OpenAI
 from typing import List, Dict, Any
 import os
 from dotenv import load_dotenv
-from .search import SearchAgent
+from agent.search import SearchAgent
 
 # Load environment variables from .env file
 load_dotenv()
@@ -73,15 +73,15 @@ class PortfolioAgent:
         
         # Add system message at the beginning
         conversation_messages = [{"role": "system", "content": system_prompt}] + messages
-        
+        print(conversation_messages)
         # Initial call to understand requirements and plan the portfolio
         response = self.client.chat.completions.create(
-            model="gpt-4-turbo-preview",
+            model="gpt-4.1-mini",
             messages=conversation_messages,
             tools=[self._get_search_tool()],
             tool_choice="auto"
         )
-        
+        print(response)
         # Process the response and handle function calls
         while True:
             message = response.choices[0].message
@@ -110,6 +110,7 @@ class PortfolioAgent:
                         tools=[self._get_search_tool()],
                         tool_choice="auto"
                     )
+                    print(response)
             else:
                 # No more function calls, we have our final response
                 break
@@ -123,7 +124,7 @@ def main():
     # Example usage
     agent = PortfolioAgent()
 
-    bond_df = pd.read_csv("bonds.csv")    
+    bond_df = pd.read_csv("src/agent/bonds.csv")    
     # Example conversation messages
     messages = [
         {"role": "user", "content": "I need a conservative portfolio with a focus on government bonds"},

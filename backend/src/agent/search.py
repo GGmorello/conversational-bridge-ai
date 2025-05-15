@@ -59,7 +59,7 @@ class SearchAgent:
         system_prompt = self._create_system_prompt(bonds_df)
         
         response = self.client.chat.completions.create(
-            model="gpt-4-turbo-preview",  # Using the latest GPT-4 model
+            model="gpt-4.1-mini",  # Using the latest GPT-4 model
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": query}

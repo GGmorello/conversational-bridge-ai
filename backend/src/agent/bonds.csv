@@ -1,0 +1,16 @@
+bond_id,issuer,type,maturity_date,coupon_rate,yield_to_maturity,credit_rating,face_value,market_price,sector,currency
+B001,US Treasury,Government,2025-12-31,2.50,2.45,AAA,1000,1002.50,Government,USD
+B002,US Treasury,Government,2026-06-30,3.00,2.95,AAA,1000,1005.00,Government,USD
+B003,US Treasury,Government,2027-12-31,3.25,3.20,AAA,1000,1002.50,Government,USD
+B004,Apple Inc,Corporate,2025-09-15,3.75,3.70,AA+,1000,1005.00,Technology,USD
+B005,Microsoft Corp,Corporate,2026-03-15,4.00,3.90,AAA,1000,1010.00,Technology,USD
+B006,JPMorgan Chase,Corporate,2025-12-15,4.25,4.15,A+,1000,1010.00,Financial,USD
+B007,Verizon,Corporate,2026-09-15,4.50,4.35,A-,1000,1015.00,Telecommunications,USD
+B008,Procter & Gamble,Corporate,2027-03-15,3.75,3.70,AA-,1000,1005.00,Consumer Goods,USD
+B009,Johnson & Johnson,Corporate,2026-12-15,3.50,3.45,AAA,1000,1005.00,Healthcare,USD
+B010,Exxon Mobil,Corporate,2027-06-15,4.25,4.20,AA+,1000,1005.00,Energy,USD
+B011,State of California,Municipal,2026-12-31,3.25,3.15,AA,1000,1010.00,Government,USD
+B012,New York City,Municipal,2027-06-30,3.50,3.40,AA-,1000,1010.00,Government,USD
+B013,European Union,Government,2026-12-31,2.75,2.70,AAA,1000,1005.00,Government,EUR
+B014,UK Treasury,Government,2027-03-31,3.25,3.20,AAA,1000,1005.00,Government,GBP
+B015,Japan Government,Government,2026-09-30,0.50,0.45,AAA,1000,1005.00,Government,JPY 
