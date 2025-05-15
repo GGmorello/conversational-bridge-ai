@@ -6,7 +6,7 @@ const Index: React.FC = () => {
   return (
     <div className="flex h-screen flex-col bg-gradient-to-br from-gray-50 to-gray-100">
       <header className="border-b bg-white p-4 shadow-sm">
-        <h1 className="text-xl font-semibold">AI Chat Interface</h1>
+        <h1 className="text-xl font-semibold">chatBTP</h1>
         <p className="text-sm text-muted-foreground">
           Connecting to localhost:8000/chat
         </p>

@@ -2,6 +2,7 @@
 import React from "react";
 import { ChatMessage as ChatMessageType } from "@/lib/types";
 import { cn } from "@/lib/utils";
+import ReactMarkdown from 'react-markdown';
 
 interface ChatMessageProps {
   message: ChatMessageType;
@@ -21,7 +22,9 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
       {isSystem ? (
         <div className="max-w-3xl rounded-md bg-gray-100 p-3 text-sm text-gray-600">
           <div className="mb-1 text-xs font-semibold text-gray-500">System</div>
-          <div className="whitespace-pre-wrap">{message.content}</div>
+          <div className="prose prose-sm max-w-none dark:prose-invert prose-p:my-1 prose-headings:mb-1 prose-headings:mt-2">
+            <ReactMarkdown>{message.content}</ReactMarkdown>
+          </div>
         </div>
       ) : (
         <div
@@ -35,7 +38,9 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
           <div className="mb-1 text-xs font-semibold">
             {isUser ? "You" : "Assistant"}
           </div>
-          <div className="whitespace-pre-wrap">{message.content}</div>
+          <div className="prose prose-sm max-w-none dark:prose-invert prose-p:my-1 prose-headings:mb-1 prose-headings:mt-2">
+            <ReactMarkdown>{message.content}</ReactMarkdown>
+          </div>
         </div>
       )}
     </div>
